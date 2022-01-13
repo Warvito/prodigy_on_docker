@@ -15,12 +15,12 @@ docker build . -t prodigy
 ```shell script
 docker run -it --user $(id -u):$(id -g) -p 8080:8080 -v "$(pwd)"/outputs:/outputs -v "$(pwd)"/prodigy:/prodigy_home -v "$(pwd)"/datasets:/datasets prodigy bash
 ```
-After initiate the container, you will be able to run Prodigy commands like ```prodigy stats```. More details about the commands to use in [https://prodi.gy/docs](https://prodi.gy/docs) 
+After initiating the container, you will be able to run Prodigy commands like ```prodigy stats```. More details about the commands to use in [https://prodi.gy/docs](https://prodi.gy/docs) 
 
-4) To finish the container, just press ```Ctrl+d```.
+4) To finish the container, press ```Ctrl+d```.
 
 ## Folder structure
-This repository is organized with the following directories
+This repository is organized with the following directories.
 - datasets: In this directory, you should store the prodigy jsonl files (inputs and outputs).  
-- prodigy: This directory is the PRODIGY_HOME dir. It stores the tool configuration and the *.db files where the tool stores the annotations.  
+- prodigy: This directory is the PRODIGY_HOME dir. It stores the tool configuration and the *.db files where the annotations are stored.  
 - wheel: In this directory, you should store the wheel files for installation.  
