@@ -2,8 +2,6 @@
 
 datasets/*
 !datasets/.gitkeep
-outputs/*
-!outputs/.gitkeep
 wheel/*
 !wheel/.gitkeep
 prodigy/*
