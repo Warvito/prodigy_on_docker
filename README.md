@@ -24,3 +24,19 @@ This repository is organized with the following directories.
 - datasets: In this directory, you should store the prodigy jsonl files (inputs and outputs).  
 - prodigy: This directory is the PRODIGY_HOME dir. It stores the tool configuration and the *.db files where the annotations are stored.  
 - wheel: In this directory, you should store the wheel files for installation.  
+
+## Recipes examples
+
+### Binary report classification between STOCK and ABNORMAL
+prodigy textcat.manual binary_report_classification_task /datasets/dataset.jsonl --label ABNORMAL,STOCK --exclusive
+
+### Fine report classification
+prodigy textcat.manual report_classification_task /datasets/dataset.jsonl --label ABNORMAL,STOCK,DEFACTO,CONTEXTUAL,INCIDENTAL --exclusive
+
+### Binary report classification between COMPARATIVE and NONCOMPARATIVE
+prodigy textcat.manual comparative_task /datasets/dataset.jsonl --label COMPARATIVE,NONCOMPARATIVE --exclusive
+
+
+## Exporting dataset
+prodigy db-out binary_report_classification_task > /datasets/binary_report_classification_task_labelled.jsonl
+
