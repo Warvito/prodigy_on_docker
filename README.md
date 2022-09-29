@@ -36,6 +36,8 @@ prodigy textcat.manual report_classification_task /datasets/dataset.jsonl --labe
 ### Binary report classification between COMPARATIVE and NONCOMPARATIVE
 prodigy textcat.manual comparative_task /datasets/dataset.jsonl --label COMPARATIVE,NONCOMPARATIVE --exclusive
 
+### Domain Review
+prodigy textcat.manual domain_review /datasets/dataset.jsonl --label pathology-cerebrovascular,pathology-csf-disorders,pathology-endocrine,pathology-infectious,pathology-neoplastic-paraneoplastic,pathology-inflammatory-autoimmune,pathology-metabolic-nutritional-toxic,pathology-neurodegenerative-dementia,pathology-traumatic,pathology-musculoskeletal,pathology-treatment,pathology-congenital-developmental,pathology-opthalmalogical,pathology-ischaemic,pathology-haemorrhagic,pathology-vascular
 
 ## Exporting dataset
 prodigy db-out binary_report_classification_task > /datasets/binary_report_classification_task_labelled.jsonl
